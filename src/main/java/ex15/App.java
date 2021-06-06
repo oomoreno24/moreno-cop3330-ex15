@@ -34,6 +34,19 @@ Encode the passwords using Bcrypt and store the hashes in the map instead of the
 
 public class App {
     public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        // any username
+        System.out.print("What is the username? ");
+        String username = in.nextLine();
+        System.out.print("What is the password? ");
+        String password = in.nextLine();
 
+        // password is "Password", case sensitive
+        if (password.equals("Password")) {
+            System.out.printf("Welcome, %s!", username);
+        }
+        else {
+            System.out.println("Incorrect password.");
+        }
     }
 }
